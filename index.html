@@ -3,31 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>English XP — Definitivo Español Premium</title>
+<title>English XP</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  /* ── Google dark core ── */
+  
   --bg:#131318;--surface:#1e1e26;--card:#25252f;--border:#2e2e3a;
   --text:#e8e8f0;--muted:#72728a;--dim:#2a2a38;
 
-  /* ── Pastel accent palette ── */
-  --mint:#7dd4b0;       /* correct / green */
-  --sky:#7ab8f5;        /* accent / blue */
-  --coral:#f28b82;      /* wrong / red */
-  --butter:#fdd663;     /* XP / gold */
-  --lavender:#b39ddb;   /* primary CTA */
-  --peach:#ffb4a2;      /* warm highlight */
+  
+  --mint:#7dd4b0;    
+  --sky:#7ab8f5;     
+  --coral:#f28b82;  
+  --butter:#fdd663;
+  --lavender:#b39ddb;
+  --peach:#ffb4a2;
 
-  /* ── Semantic aliases ── */
+  
   --accent:var(--lavender);
   --accent2:var(--butter);
   --green:var(--mint);
   --red:var(--coral);
   --blue:var(--sky);
 
-  /* ── World colors (pastel) ── */
+  
   --w1:#b39ddb;--w2:#7ab8f5;--w3:#7dd4b0;--w4:#fdd663;
   --w5:#ffb4a2;--w6:#c5a3e8;--w7:#f48fb1;
 
@@ -37,16 +37,16 @@
 html,body{height:100%;overflow:hidden}
 body{background:var(--bg);color:var(--text);font-family:var(--font);font-weight:500;display:flex;flex-direction:column}
 
-/* ── SUBTLE GRID TEXTURE ── */
+
 body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.028) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;z-index:0}
 
-/* ── LAYOUT ── */
+
 #app{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;overflow:hidden}
 .screen{display:none;flex-direction:column;flex:1;overflow:hidden}
 .screen.active{display:flex;animation:fade-up .3s cubic-bezier(.34,1.4,.64,1)}
 @keyframes fade-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
-/* ── TOP BAR ── */
+
 .topbar{display:flex;align-items:center;justify-content:space-between;padding:18px 20px 0;flex-shrink:0}
 .brand{font-size:14px;font-weight:900;letter-spacing:.04em;color:var(--lavender)}
 .topbar-xp{font-size:13px;font-weight:800;color:var(--butter);display:flex;align-items:center;gap:5px;background:rgba(253,214,99,.1);padding:5px 12px;border-radius:100px}
@@ -54,7 +54,7 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 .topbar-hints.bump{animation:hints-topbar-bump .35s cubic-bezier(.34,1.9,.64,1)}
 @keyframes hints-topbar-bump{0%,100%{transform:scale(1)}50%{transform:scale(1.2);background:rgba(125,212,176,.25)}}
 
-/* ── WORLD MAP ── */
+
 #screen-map{overflow-y:auto;padding-bottom:40px}
 .map-header{padding:22px 20px 14px;flex-shrink:0}
 .map-header h1{font-size:26px;font-weight:900;margin-bottom:3px;letter-spacing:-.01em}
@@ -685,9 +685,7 @@ body{background:radial-gradient(circle at 20% 0%,rgba(179,157,219,.08),transpare
 
 
 <style id="ander-popup-responsive-final-fix">
-/* FIX DEFINITIVO: popup emocional centrado real en cualquier móvil.
-   La versión anterior heredaba transform: translateX(-50%) de una regla vieja,
-   por eso se veía cortado a la mitad. */
+
 #emotion-layer.emotion-layer{
   position:fixed!important;
   inset:0!important;
